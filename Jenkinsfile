@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ -o output_file PES1UG21CS145.cpp || echo "Compilation failed"'
-                build job:PES1UG21CS145-1
+                sh 'g++ PES1UG21CS145.cpp -o output_file'
+                build 'PES1UG21CS145-1'
             }
         }
         stage('Test') {
@@ -17,6 +17,7 @@ pipeline {
             steps {
                 sh 'mkdir -p C:/Users/pchai/PES1UG21CS145'
                 sh 'cp output_file C:/Users/pchai/PES1UG21CS145'
+                echo 'deploy'
             }
         }
     }
