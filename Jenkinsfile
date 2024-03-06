@@ -15,8 +15,6 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'mkdir -p C:/Users/pchai/PES1UG21CS145'
-                sh 'cp output_file C:/Users/pchai/PES1UG21CS145'
                 echo 'deploy'
             }
         }
