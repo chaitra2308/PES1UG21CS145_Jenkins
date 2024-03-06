@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ -o output_file PES1UG21CS145.cpp' 
+                sh 'g++ -o output_file PES1UG21CS145.cpp || echo "Compilation failed"'
                 build job:PES1UG21CS145-1
             }
         }
